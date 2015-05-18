@@ -2,7 +2,7 @@ function sort(array){
     mergesort_internal(array, 0, array.length - 1)
 }
 
-var mergesort_internal = function(array, p, r) {
+function mergesort_internal(array, p, r) {
     if ( r > p ) {
         var q = Math.floor( (r - p)/2 ) + p;
         mergesort_internal(array, p, q);
@@ -11,7 +11,7 @@ var mergesort_internal = function(array, p, r) {
     }
 };
 
-var linear_merge = function(array, p, q, r) {
+function linear_merge(array, p, q, r) {
     var lowHalf = [];
     var highHalf = [];
     var k = p; var i; var j;

@@ -1,8 +1,8 @@
 var fs = require('fs');
 var mergesort = require('./mergesort');
 
-input_file  = '../testdata/movrat.in'
-output_file = '../testdata/movrat.out'
+input_file  = 'movrat.in'
+output_file = 'movrat.out'
 
 var file_data = fs.readFileSync(input_file, 'utf8').split('\n');
 
