@@ -3,8 +3,8 @@ import os
 
 from mergesort import merge_sort
 
-input_file  = 'testdata/movrat.in'
-output_file = 'testdata/movrat.out'
+input_file  = '../testdata/movrat.in'
+output_file = '../testdata/movrat.out'
 
 file_data = [line.strip() for line in open(input_file)]
 

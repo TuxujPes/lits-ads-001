@@ -3,6 +3,7 @@ def merge_sort(array):
 
 def merge_sort_internal(array, left, right):
     if right > left:
+        print left, right
         mid = (left + right) / 2
         left_arr  = merge_sort_internal(array, left, mid)
         right_arr = merge_sort_internal(array, mid+1, right)
@@ -10,6 +11,7 @@ def merge_sort_internal(array, left, right):
         return result
 
 def linear_merge(left_arr, right_arr):
+    print left_arr, right_arr
     left_len  = len(left_arr)
     right_len = len(right_arr)
     temp = [None] * (left_len + right_len)
