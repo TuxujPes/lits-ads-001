@@ -1,4 +1,3 @@
-import os
 from quicksort import QuickSortAlgorithm
 
 input_file = 'discnt.in'
@@ -22,6 +21,5 @@ for idx, price in enumerate(item_prices):
     price_sum += price if idx < disc_pivot else price * (1 - discount)
 
 # write to file
-os.remove(output_file) # not sure how to overwrite instead of appending
-with open(output_file, 'a') as f:
+with open(output_file, 'w') as f:
     f.write('%.2f' % price_sum)
