@@ -13,7 +13,6 @@ def main():
     uniques = get_unique_list(cards)  # O(n)
     longest_streak = get_longest_streak(uniques, jokers) + jokers  # O(n^2)
     write_solution_to_file(output_file_path, longest_streak)
-    print longest_streak
 
 def get_longest_streak(cards, jokers):
     n = len(cards)
