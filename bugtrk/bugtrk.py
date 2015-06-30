@@ -1,6 +1,6 @@
 def main():
-    input_file_path = 'bugtrk.in'
-    output_file_path = 'bugtrk.out'
+    input_file_path = 'testdata/bugtrk.in'
+    output_file_path = 'testdata/bugtrk.out'
 
     n, width, height = read_data(input_file_path)
     side = get_square_side(n, width, height)
@@ -18,7 +18,7 @@ def get_square_side(n, width, height):
         if elems_in_row * rows_in_square >= n:
             break
         # make sure we fill at least one more
-        square_side = min(width * (elems_in_row + 1), height * (rows_in_square + 1))
+        square_side += min(width, height)
 
     return square_side
 
