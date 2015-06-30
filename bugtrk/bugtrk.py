@@ -2,27 +2,25 @@ def main():
     input_file_path = 'bugtrk.in'
     output_file_path = 'bugtrk.out'
 
-    n, w, h = read_data(input_file_path)
-    side = get_square_side(n, w, h)
+    n, width, height = read_data(input_file_path)
+    side = get_square_side(n, width, height)
 
     write_solution_to_file(output_file_path, side)
 
 
-def get_square_side(n, w, h):
-    s = w if w > h else h
-    sn = n
-    while n != 0:
-        j = s
-        while n > 0 and j - h >= 0:
-            j -= h
-            i = s
-            while n > 0 and i - w >= 0:
-                i -= w
-                n -= 1
-        if n > 0:
-            s += 1
-            n = sn
-    return s
+def get_square_side(n, width, height):
+    square_side = max(width, height)
+
+    while True:
+        elems_in_row = square_side / width
+        rows_in_square = square_side / height
+
+        if elems_in_row * rows_in_square >= n:
+            break
+        # make sure we fill at least one more
+        square_side = min(width * (elems_in_row + 1), height * (rows_in_square + 1))
+
+    return square_side
 
 
 def read_data(filename):
