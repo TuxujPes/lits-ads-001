@@ -1,6 +1,6 @@
 def main():
-    input_file_path = 'testdata/bugtrk.in'
-    output_file_path = 'testdata/bugtrk.out'
+    input_file_path = 'bugtrk.in'
+    output_file_path = 'bugtrk.out'
 
     n, width, height = read_data(input_file_path)
     side = get_square_side(n, width, height)
